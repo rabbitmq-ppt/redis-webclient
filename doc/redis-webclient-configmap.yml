@@ -1,0 +1,8 @@
+﻿apiVersion: v1
+data:
+  RedisClient__ConnectionString: "myredis1980.redis.cache.windows.net:6380,password=djRRp4JuJdEzkNsfZjbV6xpqHPkRPXdEVAzCaG8A7eY=,ssl=True,abortConnect=False"
+kind: ConfigMap
+metadata:
+  name: redis-webclient-config
+  labels:
+      app: redis-webclient 

@@ -1,0 +1,14 @@
+﻿apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: redis-webclient
+  name: redis-webclient-svc-clusterip
+spec:
+  type: ClusterIP
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: redis-webclient-container-port
+  selector:
+    app: redis-webclient

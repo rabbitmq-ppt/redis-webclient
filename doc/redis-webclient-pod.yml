@@ -1,0 +1,16 @@
+﻿apiVersion: v1
+kind: Pod
+metadata:
+  name: redis-webclient
+  labels:
+    app: redis-webclient
+spec:
+  containers:
+    - name: redis-webclient
+      image: piotrbrodzinski/webclient:0.0.1
+      ports:
+        - containerPort: 80
+          name: redis-webclient-container-port
+      envFrom:
+         - configMapRef:
+             name: redis-webclient-config 
